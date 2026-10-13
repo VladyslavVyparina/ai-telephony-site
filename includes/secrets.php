@@ -3,14 +3,14 @@
 declare(strict_types=1);
 
 /**
- * Увага: після публікації в чаті рекомендуємо перевипустити токен у @BotFather.
+ * Fill these on the server. Do not commit a live bot token.
  */
-define('TELEGRAM_BOT_TOKEN', '610061830:AAHjPbaci4JTgj0_znYVTzIS2EEIR8W5ANE');
-define('TELEGRAM_CHAT_ID', '-288394205');
+define('TELEGRAM_BOT_TOKEN', getenv('TELEGRAM_BOT_TOKEN') ?: '');
+define('TELEGRAM_CHAT_ID', getenv('TELEGRAM_CHAT_ID') ?: '');
 
-// CRM API — демо-дзвінки з сайту потрапляють у Pulse CRM
-define('CRM_API_URL', 'https://bot-telegram.ai-agent.website');
-define('CRM_API_TOKEN', 'change_this_token');
+// Demo calls from the site are posted into Pulse CRM.
+define('CRM_API_URL', getenv('CRM_API_URL') ?: 'https://bot-telegram.ai-agent.website');
+define('CRM_API_TOKEN', getenv('CRM_API_TOKEN') ?: '');
 
-// ElevenLabs Conversational AI — widget для вхідних дзвінків з сайту
-define('ELEVENLABS_AGENT_ID', 'agent_2201kmxdrvttfrrsmjzd481n8c25');
+// ElevenLabs Conversational AI widget for inbound calls from the site.
+define('ELEVENLABS_AGENT_ID', getenv('ELEVENLABS_AGENT_ID') ?: '');

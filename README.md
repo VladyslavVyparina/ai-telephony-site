@@ -38,3 +38,5 @@ Open `http://127.0.0.1:8080`.
 ## What this public copy leaves out
 
 The local virtualenv that was only used to generate documents. No production mailbox passwords are in this tree. Wire `send-lead.php` to your own transport before going live.
+
+`includes/secrets.php` reads the Telegram token, the CRM token, and the ElevenLabs agent id from the environment. The page copy on the site itself is Ukrainian, because that is the language of ai-agent.website. This README is the English account of the project.
